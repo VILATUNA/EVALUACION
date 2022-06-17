@@ -1,8 +1,10 @@
+<!--IMPORTAMOS CLASES-->
 <?php include("includes/header.php") ?>
-<?php include("db.php"); 
+<?php include("db.php");
+//CREAMOS UNA LISTA PARA PODER FILTAR LOS DIAS DE RESTRICCION
 $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO");
 ?>
-
+<!-- FORMULARIO DE BUSQUEDA-->
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4">
@@ -20,6 +22,7 @@ $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "D
             </div>
         </div>
         <div class="col-md-8">
+            <!--TABLA DE NO CIRCULA-->
             <h3>NO PUEDE CIRCULAR</h3>
             <table class="table table-bordered">
                 <thead>
@@ -50,13 +53,11 @@ $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "D
                                 <?php echo ' Desde ' . $row['inicioTarde'] . ' Hasta ' . $row['finTarde'] ?>
                             </td>
                         </tr>
-                        
-                    <?php 
-                    $clave = array_search($row['dia'], $array);
-                        unset($array[$clave]);
-                    
 
-                } ?>
+                    <?php
+                        $clave = array_search($row['dia'], $array);
+                        unset($array[$clave]);
+                    } ?>
 
                 </tbody>
             </table>
@@ -64,7 +65,7 @@ $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "D
     </div>
 </div>
 
-
+<!--TABLA DE SI CIRCULA-->
 <div class="container p-4">
     <div class="col-md-8">
         <h3>PUEDE CIRCULAR</h3>
@@ -78,8 +79,8 @@ $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "D
             </thead>
             <tbody>
                 <?php
-                    foreach ($array as $v) {
-                    ?>
+                foreach ($array as $v) {
+                ?>
                     <tr>
                         <td>
                             <?php echo $digito ?>
@@ -98,7 +99,5 @@ $array = array("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "D
         </table>
     </div>
 </div>
-
-
 
 <?php include("includes/footer.php") ?>

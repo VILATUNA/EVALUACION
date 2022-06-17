@@ -1,7 +1,7 @@
 <?php
 
 include("db.php");
-
+//OPTIENE DATOS Y LOS ENVIA AL FORMULARIO PARA EDITARLOS
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $query = "SELECT * FROM horarios WHERE id = $id";
@@ -17,6 +17,7 @@ if (isset($_GET['id'])) {
     }
 }
 
+//EDITA LOS DATOS Y LOS ENVIA A LA BASE DE DATOS
 if (isset($_POST['update'])) {
 
     $id = $_GET['id'];
@@ -43,6 +44,7 @@ if (isset($_POST['update'])) {
 
 <?php include("includes/header.php") ?>
 
+<!--FORMULARIO DONDE SE PONE DATOS A EDITAR-->
 <div class="container p-4">
     <div class="row">
         <div class="col-md-4 mx-auto">
