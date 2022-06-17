@@ -1,9 +1,13 @@
+<!--IMPORTAMOS LAS CLASES-->
 <?php include("includes/header.php") ?>
 <?php include("db.php"); ?>
 
+<!-- PRIME CONTAINER-->
 <main class="container p-4">
     <div class="row">
+        <!-- FORMULARIO DE REGISTRO-->
         <div class="col-md-4">
+            <!-- MENSAJES DE ERROR Y EXITO-->
             <?php if (isset($_SESSION['message'])) { ?>
 
                 <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
@@ -45,6 +49,7 @@
                 </form>
             </div>
         </div>
+        <!-- TABLA CON DATOS PARA FUNCIONES CRUD-->
         <div class="col-md-8">
             <table class="table table-bordered">
                 <thead>
