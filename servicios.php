@@ -86,46 +86,38 @@ function horarioCircula()
     return $resultado;
 }
 
-function editarHorario()
+function Crear()
 {
+    $archivo = fopen('BasedeDatos.txt','a');  
+
     $horarios = [
         [
-            'id' => 1,
+            'id' => '1',
             'Dia' => 'Lunes',
             'Horario' => '05:00-10:00 a.m. y 16:00-21:00 p.m.'
         ],
         [
-            'id' => 2,
+            'id' => '2',
             'Dia' => 'Martes',
             'Horario' => '05:00-10:00 a.m. y 16:00-21:00 p.m.'
         ],
         [
-            'id' => 3,
+            'id' => '3',
             'Dia' => 'Miercoles',
             'Horario' => '05:00-10:00 a.m. y 16:00-21:00 p.m.'
         ],
         [
-            'id' => 4,
+            'id' => '4',
             'Dia' => 'Jueves',
             'Horario' => '05:00-10:00 a.m. y 16:00-21:00 p.m.'
         ],
         [
-            'id' => 5,
+            'id' => '5',
             'Dia' => 'Viernes',
             'Horario' => '05:00-10:00 a.m. y 16:00-21:00 p.m.'
         ]
     ];
- return $horarios;
-}
 
-function eliminar($ids){
-    $datos=editarHorario();
-
-    foreach ($datos as $key => $row) {
-        $id[$key] = $row['id'];
-        if($ids==$id[$key]){
-            unset($datos[$id[$key]]);
-        }
-    }
-
+fclose($archivo);  
+// return $horarios;
 }
