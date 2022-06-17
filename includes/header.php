@@ -12,6 +12,7 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <a href="index.php" class=navbar-brand>PICO Y PLACA</a>
+        <a href="index.php" class=navbar-brand>Menu Principal</a>
+        <a href="configPicoYPlaca.php" class=navbar-brand>CONFIGURACION</a>
     </div>  
 </nav>  
