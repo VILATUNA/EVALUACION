@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="css/main.css">
+<style>
+            footer {
+            position: relative;
+            margin-top: 100px;
+            height: 40px;
+            padding:5px 0px;
+            clear: both;
+            background: #286af0;
+            text-align: center;
+            color: #fff;
+        }
+</style>
 </head>
 <body>
     <!-- redes sociales-->
