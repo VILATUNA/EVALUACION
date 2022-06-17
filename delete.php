@@ -1,3 +1,4 @@
+<!--BORRAR UN REGISTRO-->
 <?php 
 
 include("db.php");

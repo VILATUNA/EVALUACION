@@ -1,3 +1,4 @@
+<!--inserta datos en la base de datos-->
 <?php
 include("db.php");
 
