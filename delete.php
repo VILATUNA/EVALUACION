@@ -11,9 +11,9 @@ if(isset($_GET['id'])){
     }
 
 $_SESSION['message']='Eliminado Correctamente';
-$_SESSION['message_type']='danger';
+$_SESSION['message_type'] = 'danger';
 
-header("Location: index.php");
+header("Location: configPicoYPlaca.php");
 }
 
 ?>
