@@ -15,5 +15,3 @@ $_SESSION['message_type'] = 'danger';
 
 header("Location: configPicoYPlaca.php");
 }
-
-?>

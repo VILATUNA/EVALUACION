@@ -8,10 +8,10 @@
 
                 <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
                     <?= $_SESSION['message'] ?>
-           <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </div>
             <?php session_unset();
-            }?>
+            } ?>
 
             <div class="card card-body">
                 <form action="insert.php" method="POST">
@@ -31,13 +31,13 @@
                             <option value="DOMINGO">DOMINGO</option>
                         </select>
                         <h6>RESTRICCION INICIO DIA</h6>
-                        <input type="time" name="timeInicioD" value="00:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
+                        <input type="time" name="timeInicioD" value="04:00" min="04:00" max="11:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
                         <h6>RESTRICCION FIN DIA</h6>
-                        <input type="time" name="timefinD" value="00:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
+                        <input type="time" name="timefinD" value="11:00" min="04:00" max="11:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
                         <h6>RESTRICCION INICIO TARDE</h6>
-                        <input type="time" name="timeInicioT" value="00:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
+                        <input type="time" name="timeInicioT" value="16:00" min="16:00" max="22:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
                         <h6>RESTRICCION FIN TARDE</h6>
-                        <input type="time" name="timefinT" value="00:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
+                        <input type="time" name="timefinT" value="22:00" min="16:00" max="22:00" class="form-control" placeholder="Ingrese el Horario de Pico y Placa" required>
                         <br>
                     </div>
                     <input type="submit" class="btn btn-success btn-block" value="INGRESAR" name="save_task">
@@ -69,10 +69,10 @@
                                 <?php echo $row['dia'] ?>
                             </td>
                             <td>
-                                <?php echo ' Desde '.$row['inicioManana'].' Hasta '.$row['finManana'] ?>
+                                <?php echo ' Desde ' . $row['inicioManana'] . ' Hasta ' . $row['finManana'] ?>
                             </td>
                             <td>
-                                <?php echo ' Desde '.$row['inicioTarde'].' Hasta '.$row['finTarde'] ?>
+                                <?php echo ' Desde ' . $row['inicioTarde'] . ' Hasta ' . $row['finTarde'] ?>
                             </td>
                             <td>
                                 <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary"><i class="fas fa-marker"></i></a>
